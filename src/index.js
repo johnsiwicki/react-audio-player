@@ -60,7 +60,6 @@ class Player extends React.Component {
     //let audio = document.getElementById('audio');
     let audio = this.audioEl;
     if (status === "play") {
-      console.log("PLAY", typeof audio);
       audio.play();
       status = "pause";
       setInterval(() => {
@@ -100,7 +99,7 @@ class Player extends React.Component {
     let showName = document.getElementById("Name").innerHTML;
     let showDes = document.getElementById("Artist").innerHTML;
     let trackData = this.state.track;
-    console.log(trackData);
+
     if (cEdit === true) {
       this.setState({ contentEditable: false });
       this.setState(prevState => ({
